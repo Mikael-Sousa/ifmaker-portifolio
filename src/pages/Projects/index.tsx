@@ -1,3 +1,11 @@
+import Header from "../../components/Header"
+import Section from "../../components/Section"
+
 export default function Home() {
-  return <h1>Projects Page</h1>;
+  return (
+    <>
+      <Header />
+      <Section />
+    </>
+  )
 }

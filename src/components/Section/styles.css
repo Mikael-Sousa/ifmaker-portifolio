@@ -1,0 +1,170 @@
+section {
+    background: radial-gradient(circle, #1a1a1a 0%, #0a0a0a 80%);
+    height: 100vh;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.list {
+    width: 80vw;
+    margin: auto;
+    height: 100%;
+    position: relative;
+}
+
+/* ITEM ---------------------------------------------------------- */
+
+.item {
+    position: absolute;
+    inset: 0;
+    transform: translateX(100vw);
+    opacity: 0;
+    transition: 0.7s;
+}
+
+/* IMAGEM -------------------------------------------------------- */
+
+.item-img {
+    position: absolute;
+    top: 50%;
+    width: 70%;
+    left: 100px;
+    transform: translateX(100px);
+    opacity: 0;
+    transition: 0.7s;
+    transition-delay: 0.2s;
+}
+
+.item-img img {
+    width: 40%;
+}
+
+/* CONTEÚDO ------------------------------------------------------- */
+
+.content {
+    position: absolute;
+    right: 100px;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    transform: translateX(100px);
+    opacity: 0;
+    transition: 0.7s;
+    transition-delay: 0.4s;
+}
+
+.content p {
+    font-weight: bold;
+    color: #9b9b9b; /* cinza médio */
+    font-size: 12px;
+    text-align: right;
+    max-width: 400px;
+}
+
+.content h2 {
+    font-size: 3em;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+/* BOTÃO --------------------------------------------------------- */
+
+.content button {
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    height: 35px;
+    width: 120px;
+    background: #0a0a0a;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.content button:hover {
+    box-shadow: 0 0 12px rgba(255,255,255,0.5);
+}
+
+/* SETAS --------------------------------------------------------- */
+
+.arrows {
+    width: 80vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -25px);
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.arrows button {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ffffff;
+    background: #0a0a0a;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.arrows button:hover {
+    box-shadow: 0 0 12px rgba(255,255,255,0.5);
+}
+
+/* INDICADORES --------------------------------------------------- */
+
+.indicators {
+    position: absolute;
+    top: 50%;
+    height: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.numbers {
+    font-size: 3em;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+.indicators ul {
+    display: flex;
+    gap: 3px;
+}
+
+.indicators ul li {
+    width: 50px;
+    height: 5px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(255,255,255,0.4);
+}
+
+/* ANIMAÇÕES ATIVAS ---------------------------------------------- */
+
+.item.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.item.active .item-img {
+    transform: translateY(-50%);
+    opacity: 1;
+}
+
+.item.active .content {
+    transform: translateX(0);
+    opacity: 1;
+}

@@ -1,0 +1,40 @@
+header {
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 600px;
+    gap: 10%;
+    padding: 15px;
+    z-index: 999;
+}
+
+header nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+}
+
+header h1 {
+    font-weight: 900;
+    font-size: 2em;
+    color: #ffffff;
+    text-shadow:
+        0 0 6px rgba(255,255,255,0.4),
+        0 0 12px rgba(255,255,255,0.3);
+}
+
+.navbar-section {
+    font-weight: 500;
+    font-size: 1.5em;
+    color: #cfcfcf;
+}
+
+.navbar-section.active {
+    color: #ffffff;
+    text-shadow:
+        0 0 6px rgba(255,255,255,0.5),
+        0 0 10px rgba(255,255,255,0.4);
+}
