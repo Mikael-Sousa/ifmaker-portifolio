@@ -1,14 +1,28 @@
 import "./styles.css"
+import { Link, useLocation } from "react-router-dom"
 
 export default function Header() {
+  const navbarSections = [
+    { name: "inicio", path: "/" },
+    { name: "projetos", path: "/projetos" },
+    { name: "sobre", path: "/sobre" }
+  ]
+
+   const location = useLocation()
+
   return (
     <header>
         <h1 className="title">IFMAKER</h1>
         <nav>
           <ul>
-            <li className="navbar-section">inicio</li>
-            <li className="navbar-section active">projetos</li>
-            <li className="navbar-section">sobre</li>
+              {navbarSections.map(({name, path}, index) => (
+            <li 
+              key={index}
+              className={location.pathname === path ? "active" : ""}
+            >
+              <Link to={path}>{name}</Link>
+            </li>
+          ))}
           </ul>
         </nav>
       </header>

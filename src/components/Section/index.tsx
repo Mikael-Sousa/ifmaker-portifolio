@@ -57,7 +57,7 @@ export default function Section() {
   useEffect(() => {
     intervalRef.current = window.setInterval(() => {
       changeItem("next");
-    }, 8000);
+    }, 15000);
 
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
