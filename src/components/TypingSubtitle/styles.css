@@ -1,0 +1,26 @@
+.subtitle {
+  display: block;
+  font-size: clamp(14px, 2.4vw, 18px);
+  color: var(--text-muted);
+  height: 26px;
+  margin-bottom: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--primary);
+  width: 0;
+}
+
+.animation{
+  animation: typing 2s steps(28) 0.3s forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}

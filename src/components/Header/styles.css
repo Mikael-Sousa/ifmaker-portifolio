@@ -1,54 +1,59 @@
 header {
-    position: fixed;
-    width: 100vw;
-    height: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 600px;
-    gap: 10%;
-    padding: 15px;
-    z-index: 999;
+  position: fixed;
+  width: 100vw;
+  height: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 600px;
+  gap: 10%;
+  padding: 15px;
+  z-index: 999;
 }
 
 header nav ul {
-    display: grid;
-    grid-template-columns: repeat(3, 200px);
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
 }
 
 header h1 {
-    font-weight: 900;
-    font-size: 2em;
-    color: #ffffff;
-    text-shadow:
-        0 0 6px rgba(255,255,255,0.4),
-        0 0 12px rgba(255,255,255,0.3);
+  font-weight: 900;
+  font-size: 2em;
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary),
+    var(--accent)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 li {
-    list-style: none;
-    font-weight: 500;
-    font-size: 1.5em;
-    color: #cfcfcf;
+  list-style: none;
+  font-weight: 500;
+  font-size: 1.5em;
+  color: #cfcfcf;
 }
 
 li.active {
-    color: #ffffff;
-    text-shadow:
-        0 0 6px rgba(255,255,255,0.5),
-        0 0 10px rgba(255,255,255,0.4);
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.4);
 }
 
 header nav ul li a {
-    color: inherit;       
-    text-decoration: none;
-    display: inline-block;
-    transition: .3s ease;  
-    transform: translateY(0); 
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s ease;
+  transform: translateY(0);
 }
 
 header nav ul li a:hover {
-    opacity: 0.8;
-    transform: translateY(-3px); 
+  opacity: 0.8;
+  transform: translateY(-3px);
 }

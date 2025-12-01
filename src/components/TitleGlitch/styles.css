@@ -1,0 +1,103 @@
+.hero-title-wrap {
+  overflow: visible;
+  display: inline-block;
+}
+.title {
+  font-size: clamp(36px, 7.5vw, 72px);
+  font-weight: 900;
+  position: relative;
+  color: #fff;
+  letter-spacing: 4px;
+  margin-bottom: 8px;
+  opacity: 0;
+  transform: scale(0.7);
+  animation: growIn 0.6s cubic-bezier(0.2, 0.9, 0.25, 1) forwards;
+}
+
+.title::before,
+.title::after {
+  content: "IFMAKER";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0.9;
+  transform-origin: left top;
+}
+.title::before {
+  color: var(--secondary);
+  left: 2px;
+  filter: contrast(1.1) saturate(1.2);
+  animation: glitch-before 1.6s infinite linear;
+}
+.title::after {
+  color: var(--accent);
+  left: -2px;
+  animation: glitch-after 1.45s infinite linear;
+}
+
+@keyframes glitch-before {
+  0% {
+    clip: rect(0, 9999px, 0, 0);
+    transform: translate(0, 0) skew(0);
+  }
+  6% {
+    clip: rect(12px, 9999px, 48px, 0);
+    transform: translate(-3px, -2px) skew(-0.6deg);
+  }
+  14% {
+    clip: rect(50px, 9999px, 92px, 0);
+    transform: translate(2px, 2px) skew(0.7deg);
+  }
+  22% {
+    clip: rect(0, 9999px, 22px, 0);
+    transform: translate(-1px, 0);
+  }
+  30% {
+    clip: rect(10px, 9999px, 60px, 0);
+    transform: translate(3px, -1px);
+  }
+  60% {
+    clip: rect(0, 9999px, 0, 0);
+    transform: none;
+  }
+  100% {
+    clip: rect(0, 9999px, 0, 0);
+    transform: none;
+  }
+}
+@keyframes glitch-after {
+  0% {
+    clip: rect(0, 9999px, 0, 0);
+    transform: none;
+  }
+  8% {
+    clip: rect(40px, 9999px, 80px, 0);
+    transform: translate(4px, -1px) skew(0.3deg);
+  }
+  18% {
+    clip: rect(10px, 9999px, 50px, 0);
+    transform: translate(-4px, 2px) skew(-0.8deg);
+  }
+  28% {
+    clip: rect(60px, 9999px, 120px, 0);
+    transform: translate(2px, -2px);
+  }
+  48% {
+    clip: rect(0, 9999px, 0, 0);
+    transform: none;
+  }
+  100% {
+    clip: rect(0, 9999px, 0, 0);
+    transform: none;
+  }
+}
+
+@keyframes growIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

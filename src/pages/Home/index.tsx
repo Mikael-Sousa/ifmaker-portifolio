@@ -1,4 +1,6 @@
 import Header from "../../components/Header";
+import TitleGlitch from "../../components/TitleGlitch";
+import TypingSubtitle from "../../components/TypingSubtitle";
 import WhatWeDo from "../../components/WhatWeDo";
 import Carousel from "../../components/Carousel";
 import "./styles.css"
@@ -11,18 +13,15 @@ export default function Home() {
         <section className="hero">
 
           <div className="hero-left">
-            <div className="hero-title-wrap">
-              <h1 className="title">IFMAKER</h1>
-            </div>
-            <div className="subtitle" id="subtitle">
-              Programação • Robótica • Impressão 3D
-            </div>
+            <TitleGlitch />
+            <TypingSubtitle />
             <WhatWeDo />
           </div>
 
           <div className="hero-right">
             <Carousel />
           </div>
+          
         </section>
       </main>
     </>
