@@ -43,8 +43,12 @@ li.active {
 header nav ul li a {
     color: inherit;       
     text-decoration: none;
+    display: inline-block;
+    transition: .3s ease;  
+    transform: translateY(0); 
 }
 
 header nav ul li a:hover {
     opacity: 0.8;
+    transform: translateY(-3px); 
 }

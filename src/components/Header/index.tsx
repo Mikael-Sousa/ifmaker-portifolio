@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <header>
-        <h1 className="title">IFMAKER</h1>
+        <h1>IFMAKER</h1>
         <nav>
           <ul>
               {navbarSections.map(({name, path}, index) => (

@@ -1,13 +1,27 @@
+:root {
+  --bg: #070708;
+  --panel: #0f1113;
+  --glass: rgba(255, 255, 255, 0.03);
+
+  --primary: #ff7b00;
+  --secondary: #8a2be2;
+  --accent: #0077ff;
+
+  --text-main: #fff;
+  --text-muted: #9aa0a6;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Orbitron", sans-serif;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Orbitron", sans-serif;
+  list-style: none;
 }
 
 body {
-    background: #0a0a0a;
-    color: #ffffff;
-    font-size: 16px;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text-main);
+  font-size: 16px;
 }
